@@ -1,0 +1,35 @@
+---
+# Let's add a comment to make this file sass-y.
+# Change this file for any custom CSS.
+---
+
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+	display:inline;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+	"syntax"
+;
+
+// Override
+.page-title {
+	font-size: 8rem;
+}
+.main-header-content .page-description {
+	font-size: 3rem;
+}
+
+// Navigation links in header
+.navigation {
+	margin-top: 50px;
+}
+
+// Post tags
+.post-tags {
+	font-size: 0.8em;
+}
+.post-tags span {
+	font-style: italic;
+}
