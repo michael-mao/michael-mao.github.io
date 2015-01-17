@@ -9,7 +9,7 @@ paginate: 15
 baseurl: /
 domain_name: 'http://blog.michaelmao.ca'
 permalink: '/:title'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-58311516-1'
 
 # Details for the RSS feed generator
 url:            'http://blog.michaelmao.ca'
