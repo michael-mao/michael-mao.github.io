@@ -29,16 +29,16 @@ post_class: post-template
         <section class="post-content">
             {{content}}
         </section>
-		
-		<section class="post-tags">
-			<p>Tags:
-			{% if page.tags.size > 0 %}
-				<span>{{ page.tags | sort | array_to_sentence_string | prepend: ' ' }}</span>
-			{% else %}
-				<span> None</span>
-			{% endif %}
-			</p>
-		</section>
+        
+        <section class="post-tags">
+            <p>Tags:
+            {% if page.tags.size > 0 %}
+                <span>{{ page.tags | sort | array_to_sentence_string | prepend: ' ' }}</span>
+            {% else %}
+                <span> None</span>
+            {% endif %}
+            </p>
+        </section>
 
         {% if page.archive %}
         <section class="archive">

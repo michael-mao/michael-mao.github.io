@@ -5,37 +5,37 @@
 
 /* We need to add display:inline in order to align the '>>' of the 'read more' link */
 .post-excerpt p {
-	display:inline;
+    display:inline;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-	"syntax"
+    "syntax"
 ;
 
 // Override
 .page-title {
-	font-size: 8rem;
+    font-size: 8rem;
 }
 .main-header-content .page-description {
-	font-size: 3rem;
+    font-size: 3rem;
 }
 
 // Navigation links in header
 .navigation {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 // Post tags
 .post-tags {
-	font-size: 0.8em;
-	color: #959595
+    font-size: 0.8em;
+    color: #959595
 }
 .post-tags span {
-	font-style: italic;
+    font-style: italic;
 }
 
 // Archive
 .posts-list {
-	list-style-type: none;
+    list-style-type: none;
 }

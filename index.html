@@ -23,15 +23,15 @@ pages:
                 {% if site.description %} {{ site.description }} {% endif %}
             </h2>
         </div>
-		<div class="navigation inner">
-			<h2 class="page-description">
-				{% for page in page.pages %}
-					/ <a href='{{ site.baseurl }}{{ page }}'>{{ page | capitalize }}</a> /
-				{% endfor %}
-				/ <a href="https://github.com/michael-mao/michael-mao.github.io">GitHub</a> /
-				/ <a href="mailto:m.mao@outlook.com" target="_top">Contact</a> /
-			</h2>
-		</div>
+        <div class="navigation inner">
+            <h2 class="page-description">
+                {% for page in page.pages %}
+                / <a href='{{ site.baseurl }}{{ page }}'>{{ page | capitalize }}</a> /
+                {% endfor %}
+                / <a href="https://github.com/michael-mao/michael-mao.github.io">GitHub</a> /
+                / <a href="mailto:m.mao@outlook.com" target="_top">Contact</a> /
+            </h2>
+        </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
