@@ -1,0 +1,35 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+<div>
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+        <span>
+            <a href="#{{ category | first | slugify }}">{{ category[0] }} ({{ category | last | size }})</a>
+        <span>
+    {% endfor %}
+</div>
+
+<br>
+
+<div>
+    {% assign sorted_posts = site.posts | sort:'-date' %}
+    {% for category in categories %}
+        <a name="{{ category[0] }}">
+        <h2>{{ category[0] }} ({{ category | last | size }})</h2>
+        {% for post in sorted_posts %}
+            {% if post.categories contains category[0] %}
+                <article class="post">
+                    <header>
+                        <h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                    </header>
+                    <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
+                    <section class="post-excerpt">{{ post.excerpt | truncate:120 }}</section>
+                </article>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
