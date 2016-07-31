@@ -2,8 +2,8 @@ name: Blog
 description: Michael Mao
 meta_description: "Personal Blog"
 
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 logo: false
 paginate: 15
 baseurl: /
