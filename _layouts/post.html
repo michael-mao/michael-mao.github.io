@@ -1,7 +1,5 @@
 ---
 layout: default
-disqus: true
-archive: false
 post_class: post-template
 ---
 
@@ -43,16 +41,14 @@ post_class: post-template
             </p>
         </section>
 
-        {% if page.archive %}
         <section class="archive">
-            <h5>Archive</h5>
+            <h5>Recent Posts</h5>
             <ul>
-                {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% for post in site.related_posts %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>
-        {% endif %}
 
         <footer class="post-footer">
             <!-- If we want to display author's name and bio -->
@@ -76,9 +72,9 @@ post_class: post-template
             {% include share.html %}
 
             <!-- Disqus comments -->
-            {% if page.disqus %}
+            {% unless page.comments == false %}
                 {% include disqus.html %}
-            {% endif %}
+            {% endunless %}
         </footer>
 
     </article>
