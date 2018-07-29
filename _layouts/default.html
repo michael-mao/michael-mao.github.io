@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
@@ -10,6 +10,7 @@
         gtag('config', '{{ site.google_analytics }}');
     </script>
 
+    <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -31,7 +32,7 @@
 
     <footer class="site-footer clearfix">
         <section class="copyright">
-            <a href="{{ '/' | relative_url }}">{{ site.name }}</a> &copy; 2015&ndash;2018 &bull; All rights reserved.
+            <a href="{{ '/' | relative_url }}">{{ site.author }}</a> &copy; 2015&ndash;{{  site.time | date: '%Y' }} &bull; All rights reserved.
         </section>
         <section class="poweredby">
             Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com/">GitHub Pages</a>

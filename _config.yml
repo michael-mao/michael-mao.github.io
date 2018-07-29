@@ -1,20 +1,20 @@
-name: Blog
-description: Michael Mao
-meta_description: "Personal Blog"
-
 markdown: kramdown
 highlighter: rouge
-logo: false
-paginate: 15
+
+name: Blog
+description: Michael Mao's Blog
+author: Michael Mao
+
+url: 'https://blog.michaelmao.ca'
 baseurl: ''
-domain_name: 'https://blog.michaelmao.ca'
 permalink: '/:title'
+
+# site options
+logo: false
+paginate: 10
+
 google_analytics: 'UA-58311516-1'
 disqus: 'michael340'
-
-# Details for the RSS feed generator
-url:            'https://blog.michaelmao.ca'
-author:         'Michael Mao'
 
 plugins:
   - jekyll-seo-tag
