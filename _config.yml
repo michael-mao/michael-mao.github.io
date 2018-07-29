@@ -6,7 +6,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-baseurl: /
+baseurl: '/'
 domain_name: 'https://blog.michaelmao.ca'
 permalink: '/:title'
 google_analytics: 'UA-58311516-1'
