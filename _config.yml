@@ -18,3 +18,4 @@ author:         'Michael Mao'
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
