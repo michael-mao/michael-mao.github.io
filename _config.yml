@@ -15,3 +15,6 @@ disqus: 'michael340'
 # Details for the RSS feed generator
 url:            'https://blog.michaelmao.ca'
 author:         'Michael Mao'
+
+plugins:
+  - jekyll-seo-tag
