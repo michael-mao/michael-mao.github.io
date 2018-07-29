@@ -1,0 +1,26 @@
+{% if site.author %}
+    {% unless include.hideProfileImage %}
+        <img class="author-thumb" src="/assets/images/profile.jpg" alt="Author's profile picture" nopin="nopin">
+    {% endunless %}
+    {{ site.author }}
+{% endif %}
+{% if include.post.categories.size > 0 %}
+    on
+    {% for category in include.post.categories %}
+        <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+{% endif %}
+
+<time class="post-date" datetime="{{ include.post.date | date:'%Y-%m-%d' }}">{{ include.post.date | date_to_string }}</time>
+
+<span class="post-reading-time">
+    {% assign words = include.post.content | number_of_words %}
+    {% if words < 360 %}
+        1 min
+    {% else %}
+        {{ words | divided_by:180 }} min
+    {% endif %}
+     read
+</span>
+
+<a class="post-comment-count" href="{{ include.post.url | absolute_url }}#disqus_thread" data-disqus-identifier="{{ include.post.id }}">Comments</a>

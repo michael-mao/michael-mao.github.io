@@ -53,18 +53,7 @@ pages:
             {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
         </section>
         <footer class="post-meta">
-            {% if site.author %}
-                <img class="author-thumb" src="/assets/images/profile.jpg" alt="Author's profile picture" nopin="nopin">
-                {{ site.author }}
-            {% endif %}
-            {% if post.categories.size > 0 %}
-                on
-                {% for category in post.categories %}
-                    <a href="{{ site.baseurl }}/categories/#{{ category }}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-            {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
-            <a class="post-comment-count" href="{{ post.url | absolute_url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
+            {% include post_meta.html post=post %}
         </footer>
     </article>
 
