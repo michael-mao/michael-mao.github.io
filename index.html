@@ -64,6 +64,7 @@ pages:
                 {% endfor %}
             {% endif %}
             <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
+            <a class="post-comment-count" href="{{ post.url | absolute_url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">Comments</a>
         </footer>
     </article>
 
